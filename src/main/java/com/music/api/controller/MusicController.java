@@ -26,9 +26,7 @@ public class MusicController {
 
   private MusicService musicService;
 
-  public String get() {
-    return "hello";
-  }
+
 
   // --- User Management ---
   @PostMapping("/register")
@@ -44,7 +42,7 @@ public class MusicController {
   // --- Song Management ---
   @PostMapping("/songs")
   public Song addSong(@RequestBody Song song) {
-    return MusicService.addSong(song);
+    return  musicService.addSong(song);
   }
 
   @GetMapping("/songs")
